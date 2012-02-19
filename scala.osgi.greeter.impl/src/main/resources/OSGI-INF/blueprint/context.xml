@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0">
+  <service id="greeterService" interface="com.example.scala.osgi.greeter.Greeter">
+    <bean class="com.example.scala.osgi.greeter.impl.SimpleGreeter"/>
+  </service>
+</blueprint>

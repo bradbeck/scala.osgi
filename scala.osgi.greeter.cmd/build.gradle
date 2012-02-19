@@ -1,0 +1,29 @@
+group = 'com.example'
+version = '1.0.0-SNAPSHOT'
+
+apply plugin: 'maven'
+apply plugin: 'scala'
+apply plugin: 'osgi'
+apply plugin: 'eclipse'
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+}
+
+dependencies {
+	scalaTools 'org.scala-lang:scala-compiler:2.9.1'
+	scalaTools 'org.scala-lang:scala-library:2.9.1'
+
+	compile 'org.scala-lang:scala-library:2.9.1'
+	compile 'org.apache.karaf.shell:org.apache.karaf.shell.console:2.2.5'
+	compile 'com.example:scala.osgi.greeter:1.0.0-SNAPSHOT'
+}
+
+jar {
+	manifest {
+		name = 'scala osgi greeter command with Blueprint'
+		instruction 'Bundle-Vendor', 'example.com'
+		instruction 'Import-Package', '*'
+	}
+}

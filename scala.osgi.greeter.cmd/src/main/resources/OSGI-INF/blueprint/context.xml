@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0">
+  <reference id="greeter" interface="com.example.scala.osgi.greeter.Greeter"/>
+  <command-bundle xmlns="http://karaf.apache.org/xmlns/shell/v1.0.0">
+    <command name="greeter/greet">
+      <action class="com.example.scala.osgi.greeter.impl.GreeterCommand">
+        <property name="greeter" ref="greeter"/>
+      </action>
+    </command>
+  </command-bundle>
+</blueprint>
