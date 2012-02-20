@@ -1,1 +1,1 @@
-include 'scala.osgi.greeter', 'scala.osgi.greeter.cmd', 'scala.osgi.greeter.impl'
+include 'scala.osgi.greeter', 'scala.osgi.greeter.cmd', 'scala.osgi.greeter.impl', 'scala.osgi.hello'

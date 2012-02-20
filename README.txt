@@ -8,3 +8,4 @@ karaf@root> install -s mvn:com.example/scala.osgi.greeter.impl/1.0.0-SNAPSHOT
 karaf@root> install -s mvn:com.example/scala.osgi.greeter.cmd/1.0.0-SNAPSHOT
 karaf@root> greeter:greet Fred
 Hello Fred
+karaf@root> install -s mvn:com.example/scala.osgi.hello/1.0.0-SNAPSHOT
